@@ -1,9 +1,11 @@
 * {
     margin: 0;
-    font-family: Arial;
-    border: border-box;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Fixed to properly handle padding/borders */
 }
 
+/* --- NAVBAR --- */
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -16,89 +18,136 @@
 .nav-logo {
     height: 50px;
     width: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .alogo {
-background-image: url("amazon_logo.png");
-background-size: cover;
-height: 50px;
-width: 100%;
+    /* Ensure you have an amazon_logo.png in your directory, or use a placeholder URL */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 100%;
+    filter: invert(1); /* Makes the black logo white */
 }
 
 .border {
     border: 1.5px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-.border:hover{
+.border:hover {
     border: 1.5px solid white;
 }
-/*box2*/
+
+/* --- ADDRESS --- */
 .add-first {
-color: #cccccc;
-font-size: 0.85rem;
-margin-left: 15px;
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
 }
+
 .add-second {
-font-size: 1rem;
-margin-left: 3px;
+    font-size: 1rem;
+    margin-left: 3px;
+    font-weight: 700;
 }
+
 .address-icon {
     display: flex;
     align-items: center;
 }
-/*box3*/
 
-.nav-search{
+/* --- SEARCH BAR --- */
+.nav-search {
     display: flex;
-    background-color: pink;
-    border-radius: 4px;
+    background-color: #febd68;
+    border-radius: 6px;
     width: 620px;
     height: 40px;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
 }
-.search-select{
-    background-color:#f3f3f3 ;
-    width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
 
+.nav-search:focus-within {
+    box-shadow: 0 0 0 3px #f90, 0 0 10px rgba(255, 153, 0, 0.5); /* Glowing focus effect */
 }
-.search-input{
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 55px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-select:hover {
+    background-color: #dadada;
+}
+
+.search-input {
     width: 100%;
     font-size: 1rem;
     border: none;
+    padding-left: 10px;
+    outline: none;
 }
-.search-icon{
+
+.search-icon {
     width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
     color: #0f1111;
     background-color: #febd68;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
-.nav-search:hover{
-    border: 2px solid orange;
+
+.search-icon:hover {
+    background-color: #f3a847;
 }
- span{
+
+/* --- NAV TEXT --- */
+span {
     font-size: 0.7rem;
+}
 
- }
- .nav-second{
-  font-size: 0.85rem;
-  font-weight: 700;  
- }
-
-.nav-cart{
+.nav-second {
     font-size: 0.85rem;
-}
-.nav-cart i {
-font-size: 30px;
+    font-weight: 700;  
 }
 
-.panel{
+.nav-cart {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-cart:hover i {
+    transform: scale(1.1) rotate(-5deg); /* Playful cart hover */
+}
+
+.cart-text {
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+
+/* --- PANEL --- */
+.panel {
     height: 40px;
     background-color: #222f3d;
     display: flex;
@@ -106,23 +155,30 @@ font-size: 30px;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .panel-ops p {
     display: inline;
     margin-left: 15px;
 }
-.panel-ops{
+
+.panel-ops {
     width: 70%;
     font-size: 0.85rem;
 }
-.hero-section{
-    background-image:url("hero_image.jpg");
+
+/* --- HERO SECTION --- */
+.hero-section {
+    /* Use an appealing placeholder if you don't have hero_image.jpg */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(226, 231, 230, 1)), url('https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=1600&auto=format&fit=crop');
     background-size: cover;
+    background-position: center;
     height: 350px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-.hero-msg{
+
+.hero-msg {
     background-color: white;
     color: black;
     height: 40px;
@@ -132,127 +188,188 @@ font-size: 30px;
     font-size: 0.85rem;
     width: 80%;
     margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
 }
-.shop-section{
+
+.hero-msg a {
+    color: #007185;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.hero-msg a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* --- SHOP SECTION & 3D BOX EFFECTS --- */
+.shop-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #e2e7e6;
+    padding-bottom: 20px;
 }
-.box{
- padding: 20px 0px 15px;
- margin-top: 15px;
+
+.box {
+    padding: 20px;
+    margin-top: 15px;
     height: 400px;
     width: 23%;
     background-color: white;
-
+    border-radius: 8px; /* Softer, modern edges */
+    cursor: pointer;
+    /* 3D and Hover Preparation */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.box-img{
+
+.box:hover {
+    /* 3D Lift Effect */
+    transform: translateY(-8px) scale(1.02) perspective(1000px) rotateX(2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.box-content h2 {
+    font-size: 1.3rem;
+    color: #0f1111;
+}
+
+.box-img {
     background-size: cover;
-    height: 300px;
+    background-position: center;
+    height: 270px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    border-radius: 4px;
+    /* Image zoom prep */
+    transition: transform 0.5s ease;
 }
-.box-content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+
+.box:hover .box-img {
+    transform: scale(1.04); /* Subtly zoom the image when hovering the card */
 }
-footer{
+
+.box-content p {
+    color: #007185;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.box:hover .box-content p {
+    color: #c45500;
+}
+
+/* --- FOOTER --- */
+footer {
     margin-top: 15px;
-    height: 100%;
     width: 100%;
-
 }
-.foot-panel1{
-   background-color: #37475a;
-   color: white;
-   height: 50px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 0.85rem;
 
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.foot-panel2{
+
+.foot-panel1:hover {
+    background-color: #485769;
+}
+
+.foot-panel2 {
     background-color: #222f3d;
     color: white;
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 20px;
-
+    padding-top: 40px;
 }
+
+ul p {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 ul a {
     display: block;
     font-size: 0.85rem;
     margin-top: 10px;
     color: #dddddd;
-
 }
-.foot-panel3{
+
+/* Smoother list hover effect */
+.pages1 {
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pages1:hover {
+    color: #d4a363;
+    transform: translateX(5px); /* Elegant slide-right instead of scaling */
+}
+
+.foot-panel3 {
     background-color: #222f3d;
     color: white;
-    border-top: 0.5px solid white;
+    border-top: 0.5px solid #3a4553;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo{
-    background-image: url("amazon_logo.png");
-    background-size: cover;
-    height: 50px;
+.logo {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
     width: 100px;
+    filter: invert(1);
 }
-.foot-panel4{
+
+.foot-panel4 {
     background-color: #0f1111;
     color: white;
-    height: 80px;
+    padding: 20px 0;
     font-size: 0.7rem;
     text-align: center;
-   
-    
 }
-.pages{
-    padding-top: 25px;
+
+.pages {
     color: white;
     text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
-.copyright{
-    padding-top: 5px;
-}
-.pages1{
-    text-decoration: none;
-}
-.pages1:hover{
-    transition: 0.3s ease-in-out;
 
-    color: #d4a363;
-    transform: scale(1.1);
+.pages:hover {
+    color: #d4a363; /* Changed to match Amazon's palette instead of greenyellow */
+    text-decoration: underline;
 }
-.pages:hover{
-    color: greenyellow;
-}
-.copyright:hover{
-    color: rgb(183, 149, 183);
-}
-.pages:active{
-    color: rgb(229, 160, 160);
-}
-.design{
-   font-size: 27px;
-}
+
 .copyright {
-    padding-top: 5px;
+    padding-top: 10px;
+    color: #aaaaaa;
 }
 
-/* Animations */
+/* --- ANIMATIONS --- */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
+
+/* Staggering the fade in for the product boxes */
+.fade-in-1 { animation: fadeIn 0.6s ease-out forwards; }
+.fade-in-2 { animation: fadeIn 0.8s ease-out forwards; }
+.fade-in-3 { animation: fadeIn 1.0s ease-out forwards; }
+.fade-in-4 { animation: fadeIn 1.2s ease-out forwards; }
