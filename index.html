@@ -8,19 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- ===================== HEADER ===================== -->
     <header>
+        <!-- Top Promo Banner -->
+        <div class="promo-banner">
+            <p>🎉 Big Sale Event! Up to 70% off on Electronics &nbsp;|&nbsp; Free Shipping on orders over ₹499 &nbsp;|&nbsp; <a href="#">Shop Now</a></p>
+        </div>
+
+        <!-- Main Navbar -->
         <div class="navbar">
             <div class="nav-logo border">
                 <div class="alogo"></div>
             </div>
-            
+
             <div>
                 <div class="nav-address border">
-                  <p class="add-first">Deliver to</p>
-                  <div class="address-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class="add-second">India</p>
-                  </div>
+                    <p class="add-first">Deliver to</p>
+                    <div class="address-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="add-second">India</p>
+                    </div>
                 </div>
             </div>
 
@@ -33,51 +41,177 @@
                     <option value="">Home & Kitchen</option>
                     <option value="">Books</option>
                     <option value="">Toys</option>
+                    <option value="">Grocery</option>
+                    <option value="">Sports</option>
+                    <option value="">Automotive</option>
+                    <option value="">Beauty</option>
+                    <option value="">Pet Supplies</option>
                 </select>
                 <input placeholder="Search Amazon" class="search-input">
                 <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i> 
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
 
-            <div class="nav-signin border"> 
-                <p><span>Hello, sign in</span></p>
-                <p class="nav-second">Account & Lists</p>
+            <div class="nav-language border">
+                <img src="https://flagcdn.com/w20/in.png" alt="India flag" class="flag-icon">
+                <span>EN</span>
+                <i class="fa-solid fa-caret-down"></i>
             </div>
 
-            <div class="nav-return border"> 
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists <i class="fa-solid fa-caret-down"></i></p>
+            </div>
+
+            <div class="nav-return border">
                 <p><span>Returns</span></p>
                 <p class="nav-second">& Orders</p>
             </div>
 
             <div class="nav-cart border">
-                <i class="fa-solid fa-cart-shopping design"></i> 
+                <span class="cart-count">0</span>
+                <i class="fa-solid fa-cart-shopping design"></i>
                 <span class="cart-text">Cart</span>
             </div>
         </div>
 
-       <div class="panel">
-         <div class="panel-all border">
-            <i class="fa-solid fa-bars"></i>
-            All
-         </div>
-         <div class="panel-ops">
-            <p class="border">Today's Deals</p>
-            <p class="border">Customer Service</p>
-            <p class="border">Registry</p>
-            <p class="border">Gift Cards</p>
-            <p class="border">Sell</p>
-         </div>
-       </div>
+        <!-- Secondary Panel / Nav Links -->
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deals</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Registry</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+                <p class="border">Prime</p>
+                <p class="border">New Launches</p>
+                <p class="border">Mobiles</p>
+                <p class="border">Fresh</p>
+                <p class="border">Best Sellers</p>
+            </div>
+        </div>
     </header>
 
+    <!-- ===================== HERO / LOCATION BANNER ===================== -->
     <div class="hero-section">
         <div class="hero-msg">
-            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. 
+            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
             <a href="#">Click here to go to amazon.in</a>
         </div>
     </div>
 
+    <!-- ===================== HERO CAROUSEL ===================== -->
+    <div class="hero-carousel">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1400&auto=format&fit=crop" alt="Sale Banner 1">
+                <div class="carousel-caption">
+                    <h2>Big Electronics Sale</h2>
+                    <p>Up to 70% off on top brands</p>
+                    <button class="cta-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop" alt="Sale Banner 2">
+                <div class="carousel-caption">
+                    <h2>Fashion Week Deals</h2>
+                    <p>Trendy styles at unbeatable prices</p>
+                    <button class="cta-btn">Explore</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1400&auto=format&fit=crop" alt="Sale Banner 3">
+                <div class="carousel-caption">
+                    <h2>Kitchen Must-Haves</h2>
+                    <p>Fresh deals every day</p>
+                    <button class="cta-btn">Browse</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- ===================== SIGN-IN / DEALS QUICK ACCESS ===================== -->
+    <div class="sign-deals-bar">
+        <div class="sign-box">
+            <p>Sign in for the best experience</p>
+            <button class="signin-btn">Sign in securely</button>
+            <span>New customer? <a href="#">Start here.</a></span>
+        </div>
+    </div>
+
+    <!-- ===================== DEALS OF THE DAY ===================== -->
+    <section class="section-wrapper">
+        <div class="section-header">
+            <h2>Deals of the Day</h2>
+            <a href="#">See all deals</a>
+        </div>
+        <div class="deals-grid">
+            <div class="deal-card">
+                <span class="deal-badge">72% off</span>
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=400&auto=format&fit=crop" alt="Deal 1">
+                <div class="deal-info">
+                    <p class="deal-price">₹299 <span class="deal-original">₹999</span></p>
+                    <p class="deal-title">Boat Bassheads 100</p>
+                    <div class="deal-progress-bar"><div class="deal-progress" style="width:65%"></div></div>
+                    <p class="deal-claimed">65% claimed</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <span class="deal-badge">55% off</span>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop" alt="Deal 2">
+                <div class="deal-info">
+                    <p class="deal-price">₹1,799 <span class="deal-original">₹3,999</span></p>
+                    <p class="deal-title">Smart Watch Pro</p>
+                    <div class="deal-progress-bar"><div class="deal-progress" style="width:80%"></div></div>
+                    <p class="deal-claimed">80% claimed</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <span class="deal-badge">40% off</span>
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=400&auto=format&fit=crop" alt="Deal 3">
+                <div class="deal-info">
+                    <p class="deal-price">₹2,399 <span class="deal-original">₹3,999</span></p>
+                    <p class="deal-title">Running Shoes X2</p>
+                    <div class="deal-progress-bar"><div class="deal-progress" style="width:40%"></div></div>
+                    <p class="deal-claimed">40% claimed</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <span class="deal-badge">60% off</span>
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=400&auto=format&fit=crop" alt="Deal 4">
+                <div class="deal-info">
+                    <p class="deal-price">₹799 <span class="deal-original">₹1,999</span></p>
+                    <p class="deal-title">Instant Camera Mini</p>
+                    <div class="deal-progress-bar"><div class="deal-progress" style="width:90%"></div></div>
+                    <p class="deal-claimed">90% claimed</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <span class="deal-badge">35% off</span>
+                <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=400&auto=format&fit=crop" alt="Deal 5">
+                <div class="deal-info">
+                    <p class="deal-price">₹32,999 <span class="deal-original">₹50,999</span></p>
+                    <p class="deal-title">Laptop 14" FHD</p>
+                    <div class="deal-progress-bar"><div class="deal-progress" style="width:55%"></div></div>
+                    <p class="deal-claimed">55% claimed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MAIN SHOP CATEGORY BOXES ===================== -->
     <div class="shop-section">
         <div class="box fade-in-1">
             <div class="box-content">
@@ -107,7 +241,6 @@
                 <p>See more</p>
             </div>
         </div>
-        
         <div class="box fade-in-1">
             <div class="box-content">
                 <h2>Beauty Steals under $25</h2>
@@ -138,16 +271,448 @@
         </div>
     </div>
 
+    <!-- ===================== PRIME BANNER ===================== -->
+    <div class="prime-banner">
+        <div class="prime-content">
+            <div class="prime-logo">prime</div>
+            <div class="prime-text">
+                <h3>Try Amazon Prime Free for 30 Days</h3>
+                <p>Enjoy fast delivery, exclusive deals, Prime Video & more</p>
+            </div>
+            <button class="prime-btn">Try Prime Free</button>
+        </div>
+    </div>
+
+    <!-- ===================== PRODUCT RECOMMENDATION CAROUSEL ===================== -->
+    <section class="section-wrapper">
+        <div class="section-header">
+            <h2>Based on your recent history</h2>
+            <a href="#">See more</a>
+        </div>
+        <div class="product-scroll-row">
+            <button class="scroll-btn left-scroll" onclick="scrollRow(this, -300)"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="product-row" id="recentRow">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=300&auto=format&fit=crop" alt="Headphones">
+                    <div class="product-info">
+                        <p class="product-title">Wireless Noise-Cancelling Headphones</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(4,231)</span>
+                        </div>
+                        <p class="product-price">₹2,499</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?q=80&w=300&auto=format&fit=crop" alt="Smart Watch">
+                    <div class="product-info">
+                        <p class="product-title">Smart Fitness Band with HR Monitor</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(2,890)</span>
+                        </div>
+                        <p class="product-price">₹1,899</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=300&auto=format&fit=crop" alt="Shoes">
+                    <div class="product-info">
+                        <p class="product-title">Men's Sports Running Shoes</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(1,543)</span>
+                        </div>
+                        <p class="product-price">₹1,299</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=300&auto=format&fit=crop" alt="Keyboard">
+                    <div class="product-info">
+                        <p class="product-title">Mechanical RGB Gaming Keyboard</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(6,102)</span>
+                        </div>
+                        <p class="product-price">₹3,799</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=300&auto=format&fit=crop" alt="Perfume">
+                    <div class="product-info">
+                        <p class="product-title">Luxury Perfume Gift Set</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(987)</span>
+                        </div>
+                        <p class="product-price">₹1,199</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=300&auto=format&fit=crop" alt="Laptop">
+                    <div class="product-info">
+                        <p class="product-title">Laptop 15.6" Core i5 16GB RAM</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(3,244)</span>
+                        </div>
+                        <p class="product-price">₹45,999</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <button class="scroll-btn right-scroll" onclick="scrollRow(this, 300)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- ===================== BEST SELLERS ===================== -->
+    <section class="section-wrapper bestsellers-section">
+        <div class="section-header">
+            <h2>Best Sellers in Electronics</h2>
+            <a href="#">See all best sellers</a>
+        </div>
+        <div class="product-scroll-row">
+            <button class="scroll-btn left-scroll" onclick="scrollRow(this, -300)"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="product-row" id="bestsellerRow">
+                <div class="product-card bestseller-card">
+                    <span class="bestseller-badge">#1 Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=300&auto=format&fit=crop" alt="Echo">
+                    <div class="product-info">
+                        <p class="product-title">Amazon Echo Dot (5th Gen)</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(92,432)</span>
+                        </div>
+                        <p class="product-price">₹4,499</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card bestseller-card">
+                    <span class="bestseller-badge">#2 Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=300&auto=format&fit=crop" alt="Earbuds">
+                    <div class="product-info">
+                        <p class="product-title">TWS Earbuds with 30hr Battery</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(45,211)</span>
+                        </div>
+                        <p class="product-price">₹1,399</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card bestseller-card">
+                    <span class="bestseller-badge">#3 Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=300&auto=format&fit=crop" alt="Phone">
+                    <div class="product-info">
+                        <p class="product-title">Redmi Note 13 Pro 5G</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(78,023)</span>
+                        </div>
+                        <p class="product-price">₹21,999</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card bestseller-card">
+                    <span class="bestseller-badge">#4 Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=300&auto=format&fit=crop" alt="Speaker">
+                    <div class="product-info">
+                        <p class="product-title">Portable Bluetooth Speaker</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(22,109)</span>
+                        </div>
+                        <p class="product-price">₹2,099</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card bestseller-card">
+                    <span class="bestseller-badge">#5 Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=300&auto=format&fit=crop" alt="Tablet">
+                    <div class="product-info">
+                        <p class="product-title">Fire HD 10 Tablet 32GB</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(38,712)</span>
+                        </div>
+                        <p class="product-price">₹9,999</p>
+                        <p class="prime-tag"><i class="fa-solid fa-check"></i> Prime</p>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <button class="scroll-btn right-scroll" onclick="scrollRow(this, 300)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- ===================== SPLIT PROMO BANNERS ===================== -->
+    <section class="split-banners">
+        <div class="split-banner-card">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=700&auto=format&fit=crop" alt="Books">
+            <div class="split-overlay">
+                <h3>Top Reads This Month</h3>
+                <a href="#">Shop Books</a>
+            </div>
+        </div>
+        <div class="split-banner-card">
+            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=700&auto=format&fit=crop" alt="Smart Home">
+            <div class="split-overlay">
+                <h3>Smart Home Essentials</h3>
+                <a href="#">Explore Now</a>
+            </div>
+        </div>
+        <div class="split-banner-card">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=700&auto=format&fit=crop" alt="Fitness">
+            <div class="split-overlay">
+                <h3>Fitness & Wellness</h3>
+                <a href="#">Get Fit</a>
+            </div>
+        </div>
+        <div class="split-banner-card">
+            <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?q=80&w=700&auto=format&fit=crop" alt="Gaming">
+            <div class="split-overlay">
+                <h3>Gaming Zone</h3>
+                <a href="#">Level Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== RECENTLY VIEWED ===================== -->
+    <section class="section-wrapper">
+        <div class="section-header">
+            <h2>Keep shopping for</h2>
+            <a href="#">See all</a>
+        </div>
+        <div class="recently-viewed-grid">
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=200&auto=format&fit=crop" alt="Bag">
+                <p>Leather Backpack</p>
+                <p class="rv-price">₹1,999</p>
+            </div>
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=200&auto=format&fit=crop" alt="Camera">
+                <p>Instant Camera</p>
+                <p class="rv-price">₹3,499</p>
+            </div>
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=200&auto=format&fit=crop" alt="Chair">
+                <p>Ergonomic Chair</p>
+                <p class="rv-price">₹8,999</p>
+            </div>
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1520549233664-03f65c1d1327?q=80&w=200&auto=format&fit=crop" alt="Sunglasses">
+                <p>Polarised Sunglasses</p>
+                <p class="rv-price">₹699</p>
+            </div>
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=200&auto=format&fit=crop" alt="Sofa">
+                <p>3-Seater Sofa</p>
+                <p class="rv-price">₹22,500</p>
+            </div>
+            <div class="rv-item">
+                <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=200&auto=format&fit=crop" alt="Charger">
+                <p>65W Fast Charger</p>
+                <p class="rv-price">₹799</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== COUPON / OFFER SECTION ===================== -->
+    <section class="coupon-section">
+        <div class="section-header">
+            <h2>Coupons & Offers</h2>
+            <a href="#">See all coupons</a>
+        </div>
+        <div class="coupon-grid">
+            <div class="coupon-card">
+                <div class="coupon-left">10% OFF</div>
+                <div class="coupon-right">
+                    <p class="coupon-title">On orders above ₹999</p>
+                    <p class="coupon-code">Code: <strong>SAVE10</strong></p>
+                    <button class="clip-btn">Clip Coupon</button>
+                </div>
+            </div>
+            <div class="coupon-card">
+                <div class="coupon-left">₹200 OFF</div>
+                <div class="coupon-right">
+                    <p class="coupon-title">Electronics purchase of ₹5,000+</p>
+                    <p class="coupon-code">Code: <strong>TECH200</strong></p>
+                    <button class="clip-btn">Clip Coupon</button>
+                </div>
+            </div>
+            <div class="coupon-card">
+                <div class="coupon-left">FREE</div>
+                <div class="coupon-right">
+                    <p class="coupon-title">Delivery on first order</p>
+                    <p class="coupon-code">Code: <strong>FIRSTSHIP</strong></p>
+                    <button class="clip-btn">Clip Coupon</button>
+                </div>
+            </div>
+            <div class="coupon-card">
+                <div class="coupon-left">5% OFF</div>
+                <div class="coupon-right">
+                    <p class="coupon-title">With Amazon Pay ICICI Card</p>
+                    <p class="coupon-code">Auto-applied at checkout</p>
+                    <button class="clip-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CUSTOMER REVIEWS SECTION ===================== -->
+    <section class="section-wrapper reviews-section">
+        <div class="section-header">
+            <h2>Top Customer Reviews</h2>
+            <a href="#">See all reviews</a>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">R</div>
+                    <div>
+                        <p class="reviewer-name">Rahul M.</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <p class="review-title">Excellent product, totally worth it!</p>
+                <p class="review-body">Sound quality is top notch. Battery lasts easily 20+ hours. Build quality feels premium. Highly recommend for music lovers.</p>
+                <p class="review-product">For: Wireless Headphones</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">P</div>
+                    <div>
+                        <p class="reviewer-name">Priya S.</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <p class="review-title">Great value for money</p>
+                <p class="review-body">Delivered in 2 days. Packaging was great. The product matches the description exactly. Would definitely buy again.</p>
+                <p class="review-product">For: Smart Watch Pro</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">A</div>
+                    <div>
+                        <p class="reviewer-name">Aditya K.</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <p class="review-title">Comfortable and stylish</p>
+                <p class="review-body">Fits perfectly. Very comfortable even after long runs. The grip sole is excellent. Highly recommend for daily workout use.</p>
+                <p class="review-product">For: Running Shoes X2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== AMAZON SERVICES SECTION ===================== -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2>Explore Amazon Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-brands fa-amazon service-icon"></i>
+                <h4>Amazon Prime</h4>
+                <p>Unlimited free delivery + Prime Video + Music</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-truck-fast service-icon"></i>
+                <h4>Same Day Delivery</h4>
+                <p>Order before 12 PM, get it delivered today</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-shield-halved service-icon"></i>
+                <h4>Safe Payments</h4>
+                <p>100% secure transactions, 30-day returns</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-store service-icon"></i>
+                <h4>Sell on Amazon</h4>
+                <p>Reach millions of customers across India</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-gift service-icon"></i>
+                <h4>Gift Cards</h4>
+                <p>Perfect gift for any occasion, any amount</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-headset service-icon"></i>
+                <h4>24/7 Support</h4>
+                <p>We're here to help anytime, any day</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER SECTION ===================== -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h3>Stay in the Loop</h3>
+            <p>Get exclusive deals, new launch alerts, and personalized recommendations.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
     <footer>
         <div class="foot-panel1">Back to Top</div>
+
         <div class="foot-panel2">
             <ul>
                 <p>Get to Know Us</p>
                 <a href="#" class="pages1">Careers</a>
                 <a href="#" class="pages1">Blog</a>
+                <a href="#" class="pages1">About Amazon</a>
                 <a href="#" class="pages1">Investor Relations</a>
                 <a href="#" class="pages1">Amazon Devices</a>
                 <a href="#" class="pages1">Amazon Science</a>
+                <a href="#" class="pages1">Sustainability</a>
             </ul>
             <ul>
                 <p>Make Money with Us</p>
@@ -156,6 +721,7 @@
                 <a href="#" class="pages1">Become an Affiliate</a>
                 <a href="#" class="pages1">Advertise Your Products</a>
                 <a href="#" class="pages1">Self-Publish with Us</a>
+                <a href="#" class="pages1">Host an Amazon Hub</a>
             </ul>
             <ul>
                 <p>Amazon Payment Products</p>
@@ -163,6 +729,8 @@
                 <a href="#" class="pages1">Shop with Points</a>
                 <a href="#" class="pages1">Reload Your Balance</a>
                 <a href="#" class="pages1">Amazon Currency Converter</a>
+                <a href="#" class="pages1">Amazon Pay UPI</a>
+                <a href="#" class="pages1">EMI on Amazon</a>
             </ul>
             <ul>
                 <p>Let Us Help You</p>
@@ -170,8 +738,30 @@
                 <a href="#" class="pages1">Your Account</a>
                 <a href="#" class="pages1">Your Orders</a>
                 <a href="#" class="pages1">Shipping Rates & Policies</a>
+                <a href="#" class="pages1">Amazon Prime</a>
+                <a href="#" class="pages1">Returns & Replacements</a>
                 <a href="#" class="pages1">Help</a>
             </ul>
+        </div>
+
+        <!-- Footer Social & App Section -->
+        <div class="foot-social">
+            <div class="foot-apps">
+                <p>Get the app</p>
+                <div class="app-badges">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="app-badge"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="app-badge"></a>
+                </div>
+            </div>
+            <div class="foot-social-icons">
+                <p>Follow us</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
 
         <div class="foot-panel3">
@@ -183,9 +773,73 @@
                 <a href="#" class="pages">Conditions of Use</a>
                 <a href="#" class="pages">Privacy Notice</a>
                 <a href="#" class="pages">Your Ads Privacy Choices</a>
+                <a href="#" class="pages">Cookie Preferences</a>
+                <a href="#" class="pages">Interest-Based Ads</a>
             </div>
             <div class="copyright">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
         </div>
     </footer>
+
+    <!-- ===================== BACK TO TOP BUTTON ===================== -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        // Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        function moveCarousel(dir) { showSlide(currentSlide + dir); }
+        function goToSlide(index) { showSlide(index); }
+        setInterval(() => moveCarousel(1), 4000);
+
+        // Scroll row for product carousels
+        function scrollRow(btn, amount) {
+            const row = btn.closest('.product-scroll-row').querySelector('.product-row');
+            row.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        // Clip coupon button
+        document.querySelectorAll('.clip-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent === 'Clip Coupon') {
+                    this.textContent = '✓ Clipped';
+                    this.style.background = '#007600';
+                    this.style.color = '#fff';
+                }
+            });
+        });
+
+        // Add to Cart counter
+        let cartCount = 0;
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                cartCount++;
+                document.querySelector('.cart-count').textContent = cartCount;
+                this.textContent = 'Added ✓';
+                this.style.background = '#c7511f';
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                    this.style.background = '';
+                }, 1500);
+            });
+        });
+
+        // Back to top button visibility
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+        });
+    </script>
 </body>
 </html>
