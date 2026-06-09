@@ -29,7 +29,6 @@ This project is a high-fidelity front-end clone of Amazon.com. The primary focus
 * **State Management:** Redux Toolkit / React Context API
 
 ## 🚀 Getting Started
-
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
